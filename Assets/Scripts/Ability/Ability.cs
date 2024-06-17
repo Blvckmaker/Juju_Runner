@@ -79,12 +79,12 @@ public class Ability : MonoBehaviour
         // Wait for the animation to reach the hit frame
         yield return new WaitForSeconds(abilityData.animation.length * 0.5f); // Adjust the timing if needed
 
-        // Implement your damage logic here, for example using Raycast or Collider detection
+        // Implement your damage logic here
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, 2f);
         foreach (var hitCollider in hitColliders)
         {
             // Apply damage to the hit objects
-            // Example: hitCollider.GetComponent<Health>()?.TakeDamage(abilityData.damage);
+            //hitCollider.GetComponent<Health>()?.TakeDamage(abilityData.damage);
         }
     }
 
